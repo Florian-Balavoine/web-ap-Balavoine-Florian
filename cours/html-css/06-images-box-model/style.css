@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    color: darklategray;
+
+}
+
+h1 {
+    color: steelblue;
+}
+
+h2 {
+    color: teal;
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+.recommandee {
+    font-weight: bold;
+    color: seagreen;
+}
+
+.deconseillee {
+    font-style: bold;
+    color: darkred;
+}
+
+/* Style de la liste dans son ensemble */
+.ma-liste {
+    list-style: none;
+    /* Supprime les puces par défaut */
+    padding: 0;
+    margin: 20px;
+    background-color: #f0f0f0;
+
+    /* Arrondir les angles de la liste */
+    border-radius: 12px;
+    overflow: hidden;
+    /* Empêche le contenu de dépasser des angles arrondis */
+}
+
+/* Style de chaque élément de la liste */
+.ma-liste li {
+    padding: 15px 20px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+    /* Rend le changement de couleur fluide */
+    cursor: pointer;
+    /* Change le curseur en main au survol */
+}
+
+/* Changement d'apparence au survol de la souris */
+.ma-liste li:hover {
+    background-color: #007BFF;
+    /* Devient bleu au survol */
+    color: #ffffff;
+    /* Le texte devient blanc pour rester lisible */
+}
+
+.ma-liste li:hover {
+    background-color: #007BFF;
+    color: #ffffff;
+    border-radius: 8px;
+    /* Optionnel : ajoute un effet de relief au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style de base pour chaque élément de la liste */
+.ma-liste li {
+    padding: 15px 20px;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    /* Transition fluide pour la couleur ET les angles arrondis */
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 16px;
+}
+
+nav a {
+    color: darkslategray;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: darkslategray;
+}
+
+nav a:hover {
+    color: seagreen;
+    text-decoration: underline;
+}
+
+figure {
+    border: 2px solid steelblue;
+    padding: 8px;
+    margin: 16px 0;
+    width: fit-content;
+}
+
+img {
+    width: 300px;
+}
+
+figcaption {
+    font-style: italic;
+    margin-top: 4px;
+}
