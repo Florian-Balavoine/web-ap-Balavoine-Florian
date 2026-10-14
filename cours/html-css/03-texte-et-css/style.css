@@ -81,28 +81,3 @@ li {
     /* Transition fluide pour la couleur ET les angles arrondis */
     transition: background-color 0.3s ease, border-radius 0.3s ease;
 }
-
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin-right: 16px;
-}
-
-nav a {
-    color: darkslategray;
-    text-decoration: none;
-}
-
-nav a:visited {
-    color: darkslategray;
-}
-
-nav a:hover {
-    color: seagreen;
-    text-decoration: underline;
-}
