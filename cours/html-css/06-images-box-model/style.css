@@ -106,6 +106,8 @@ figure {
     padding: 8px;
     margin: 16px 0;
     width: fit-content;
+    background-color: #807070;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 img {
