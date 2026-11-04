@@ -197,3 +197,21 @@ header {
 .colonnes aside {
     flex: 1;
 }
+
+/* Remplacez ou ajoutez cette règle pour cibler la liste des races */
+ul {
+    display: flex;
+    gap: 15px;
+    /* Espace entre chaque race (ajustable selon vos goûts) */
+    list-style-type: none;
+    /* Optionnel : supprime les puces pour un rendu plus propre */
+    padding: 0;
+    /* Optionnel : supprime le décalage par défaut de la liste */
+}
+
+.liste-races {
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    padding: 0;
+}
