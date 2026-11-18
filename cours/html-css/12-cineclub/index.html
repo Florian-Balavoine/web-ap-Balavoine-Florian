@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cinéclub — la communauté des cinéphiles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- NAVIGATION -->
+<header class="nav" id="nav">
+  <a class="logo" href="#top" aria-label="Cinéclub"><span class="logo-mark"></span>Cinéclub</a>
+  <nav class="links" id="links">
+    <a href="#top">Accueil</a><a href="#films">Films</a><a href="#critiques">Critiques</a><a href="#listes">Listes</a><a href="#membres">Membres</a>
+  </nav>
+  <div class="search"><input id="q" type="search" placeholder="Rechercher un film, un réalisateur" autocomplete="off" aria-label="Recherche"><ul id="suggest" hidden></ul></div>
+  <button class="btn ghost" data-auth="login">Connexion</button>
+  <button class="btn solid" data-auth="signup">Inscription</button>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-in">
+    <h1>Le cinéma ne se regarde pas seulement. Il se vit.</h1>
+    <p>Notez ce que vous avez vu, écrivez ce qui vous a bouleversé, composez vos listes et suivez ceux dont le goût vous ressemble.</p>
+    <div class="cta"><a class="btn solid big" href="#films">Explorer les films</a><button class="btn ghost big" data-auth="signup">Rejoindre la communauté</button></div>
+  </div>
+</section>
+
+<section class="sec"><div class="head"><h2>Populaires cette semaine</h2></div><div class="rail" id="r-pop"></div></section>
+<section class="sec"><div class="head"><h2>Les mieux notés</h2></div><div class="rail" id="r-top"></div></section>
+<section class="sec"><div class="head"><h2>Ajoutés récemment</h2></div><div class="rail" id="r-new"></div></section>
+
+<!-- EXPLORER -->
+<section class="sec" id="films">
+  <div class="head"><h2>Explorer les films</h2><span id="count" class="muted"></span></div>
+  <div class="filters">
+    <input id="f-q" type="search" placeholder="Titre ou réalisateur" aria-label="Filtrer par titre">
+    <div class="chips" id="chips"></div>
+    <select id="f-year" aria-label="Année"><option value="">Toutes les années</option><option value="2020">2020 et après</option><option value="2010">2010–2019</option><option value="2000">2000–2009</option><option value="1990">1990–1999</option><option value="0">Avant 1990</option></select>
+    <select id="f-rate" aria-label="Note minimale"><option value="0">Toutes les notes</option><option value="4.5">4,5 et plus</option><option value="4">4 et plus</option><option value="3.5">3,5 et plus</option></select>
+    <select id="f-sort" aria-label="Tri"><option value="pop">Popularité</option><option value="date">Date de sortie</option><option value="note">Note</option></select>
+  </div>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>Aucun film ne correspond. Élargissez les filtres ou effacez la recherche.</p>
+</section>
+
+<section class="sec" id="critiques"><div class="head"><h2>Critiques de la communauté</h2></div><div class="reviews" id="reviews"></div></section>
+<section class="sec" id="listes"><div class="head"><h2>Listes populaires</h2></div><div class="lists" id="lists"></div></section>
+<section class="sec" id="membres"><div class="head"><h2>Membres à suivre</h2></div><div class="members" id="members"></div></section>
+</main>
+
+<footer><span class="logo"><span class="logo-mark"></span>Cinéclub</span><span class="muted">Projet démo. Ce site utilise l’API TMDB mais n’est ni soutenu ni certifié par TMDB.</span></footer>
+
+<!-- MODALES -->
+<dialog id="film-dlg"></dialog>
+<dialog id="auth-dlg">
+  <form method="dialog" class="auth"><h3 id="auth-t">Connexion</h3>
+    <input placeholder="Nom d'utilisateur" required><input type="password" placeholder="Mot de passe" required>
+    <button class="btn solid big" id="auth-ok">Se connecter</button><button class="btn ghost" value="x">Fermer</button></form>
+</dialog>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
